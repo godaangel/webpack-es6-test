@@ -30,8 +30,8 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true,
     proxy: { // 配置接口转发规则
-      '/diagnose': {  
-        target: 'http://114.215.156.99:8381', 
+      '/test': {  
+        target: 'http://your ip:port', 
         secure: false,
         changeOrigin: true
       }  
