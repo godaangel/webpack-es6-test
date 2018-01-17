@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 function resolve (dir) {
-  return path.join(__dirname, '..', dir)
+  return path.join(__dirname, '.', dir)
 }
 
 module.exports = {
@@ -12,8 +12,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
-  plugins: [
-  ],
+  plugins: [],
   module: {
     rules: [{
       test: /\.js$/,
@@ -23,7 +22,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': resolve('src')
+      '@': resolve('src'),
+      'demo': resolve('src/demo')
     }
   },
   devServer: {
