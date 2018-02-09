@@ -19,7 +19,7 @@ var Find = function(needFind, obj, type = 'value') {
   let flag = null; // 对应值是否存在
   for (let i in obj) {
     if (type == 'key' && i === needFind) {
-      // 如果存在对应值，则返回该值所在的对象
+      // 如果存在对应key，则返回该key对应的值
       flag = obj[i];
       break;
     }else if (type == 'value' && obj[i] === needFind) {

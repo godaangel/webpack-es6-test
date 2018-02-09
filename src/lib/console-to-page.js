@@ -14,14 +14,14 @@ var Ctp = function(...arg){
   let log = '';
   for(let i in arg){
     if(typeof arg[i] == 'object'){
-      html += `<p>${JSON.stringify(arg[i])}</p>`;
+      html += `<code>${JSON.stringify(arg[i])}</code>`;
     }else{
       html += `<p>${arg[i]}</p>`;
     }
     console.log(arg[i])
   }
   
-  msgDiv.innerHTML += html;
+  msgDiv.innerHTML += `<div class="block">${html}</div>`;
 }
 
 export default Ctp;

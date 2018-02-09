@@ -1,6 +1,6 @@
 /**
  * es6测试代码
- * @符号在webpack.config.js的alias里面配置 alias原理去百度吧~
+ * 符号在webpack.config.js的alias里面配置 alias原理去百度吧~
  */
 import Ctp from '@/lib/console-to-page'; // 导入输出工具
 Ctp('欢迎使用es6代码编辑测试');
@@ -12,6 +12,7 @@ import {letRange} from 'demo/let-const/index';
 import FindValue from 'demo/utils/findvalue';
 import FindKey from 'demo/utils/findkey';
 import Find from 'demo/utils/find';
+import IsSameObj from 'demo/utils/sameObj';
 
 // 数据源
 import Obj from 'demo/utils/testObj';
@@ -46,9 +47,38 @@ const AllFunction = {
   letConst() {
     // let const 的作用域
     letRange();
+  },
+  sameObj(){
+    let obj_1 = {
+      name: 'goda',
+      age: {
+        number: 20,
+        haha: 134,
+        name: {
+          hah:123
+        }
+      }
+    };
+
+    let obj_2 = {
+      name: 'goda',
+      age: {
+        number: 20,
+        haha: 134,
+        name: {
+          hah:123
+        }
+      }
+    }
+
+    let isSame = IsSameObj(obj_1, obj_2, true);
+    Ctp('IsSameObj ----> ', isSame);
+    
   }
 }
 
-AllFunction.letConst();
-AllFunction.findInObj();
+// AllFunction.letConst();
+// AllFunction.findInObj();
+
+AllFunction.sameObj();
 
