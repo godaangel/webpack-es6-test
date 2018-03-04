@@ -7,6 +7,7 @@ Ctp('欢迎使用es6代码编辑测试');
 
 // study
 import {letRange} from 'demo/let-const/index';
+import Bayes from 'demo/bayes/index';
 
 // utils
 import FindValue from 'demo/utils/findvalue';
@@ -80,5 +81,39 @@ const AllFunction = {
 // AllFunction.letConst();
 // AllFunction.findInObj();
 
-AllFunction.sameObj();
+// AllFunction.sameObj();
+
+/**
+ * 叶贝斯分类 start
+ */
+// import BTestData from 'demo/bayes/testData';
+// var test = ['sunny', 'hot', 'high', 'FALSE'];
+
+// var bayes = new Bayes(BTestData);
+// var bayesResult = bayes.predictClass(test);
+
+// Ctp('贝叶斯分类 bayesResult ----> ', bayesResult);
+/**
+ * 叶贝斯分类 end
+ */
+
+function fn() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('success')
+        })
+    })
+}
+
+let test = async function() {
+    let result = await fn() //因为fn会返回一个Promise对象
+    console.log(result)    //这里会打出Promise成功后传递过来的'success'
+}
+
+test()
+
+// import 'demo/promise/index';
+
+// import 'demo/promise/link';
+
 
