@@ -4,9 +4,6 @@
  */
 import Ctp from '@/lib/console-to-page'; // 导入输出工具
 Ctp('欢迎使用es6代码编辑测试');
-/**
- * 测试一下提交
- */
 
 // study
 import {letRange} from 'demo/let-const/index';
