@@ -4,12 +4,6 @@
     "stage-3"
   ],
   "plugins": [[
-    "transform-runtime",
-    {
-      "helpers": false,
-      "polyfill": false,
-      "regenerator": true,
-      "moduleName": "babel-runtime"
-    }
+    "transform-decorators-legacy"
   ]]
 }

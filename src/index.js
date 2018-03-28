@@ -97,23 +97,8 @@ const AllFunction = {
  * 叶贝斯分类 end
  */
 
-function fn() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('success')
-        })
-    })
-}
-
-let test = async function() {
-    let result = await fn() //因为fn会返回一个Promise对象
-    console.log(result)    //这里会打出Promise成功后传递过来的'success'
-}
-
-test()
-
 // import 'demo/promise/index';
-
 // import 'demo/promise/link';
+// import 'demo/promise/await';
 
-
+import 'demo/decorators/index';
