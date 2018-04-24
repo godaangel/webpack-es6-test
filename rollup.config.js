@@ -4,10 +4,12 @@ import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  entry: 'src/main.js',
-  dest: 'dist/main.min.js',
-  format: 'cjs',
-  sourceMap: true,
+  input: 'src/main.js',
+  output: {
+    file:'dist/main.min.js',
+    format: 'cjs',
+    sourcemap: true
+  },
   plugins: [
     buble({
       objectAssign: 'Object.assign',
